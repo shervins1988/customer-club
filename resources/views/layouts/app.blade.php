@@ -55,6 +55,7 @@
                                 </a>
 
                                 <div class="dropdown-menu dropdown-menu-right text-right" aria-labelledby="navbarDropdown">
+                                    <a href="{{route('acc')}}" class="dropdown-item">مدیریت حساب کاربری</a>
                                     <a class="dropdown-item" href="{{ route('logout') }}"
                                     onclick="event.preventDefault();
                                     document.getElementById('logout-form').submit();">
@@ -66,6 +67,7 @@
                                 </form>
                             </div>
                         </li>
+
                     @endguest
                 </ul>
             </div>
@@ -83,8 +85,15 @@
                     </ul>
                 </div>
             @endif
+            @if (session('message'))
+                <div class="alert alert-success">
+                    {{session('message')}}
+                </div>
+            @endif
+
+            @yield('content')
         </div>
-        @yield('content')
+
     </main>
 </div>
 </body>
