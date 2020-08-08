@@ -1,17 +1,17 @@
 <!doctype html>
-<html class="no-js " lang="fa">
+<html class="no-js " lang="en">
 
 <!-- Mirrored from www.wrraptheme.com/templates/compass/html/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 29 Jul 2019 10:22:38 GMT -->
 <head>
-@include('layouts.header')
+    @include('layouts.header')
 </head>
 <body class="theme-cyan">
-<!-- Page Loader -->
-<div class="page-loader-wrapper">
+    <!-- Page Loader -->
+   <div class="page-loader-wrapper">
     <div class="loader">
-        <div class="m-t-30"><img class="zmdi-hc-spin" src="assets/images/logo.svg" width="48" height="48" alt="قطب نما"></div>
-        <p>لطفا صبر کنید ...</p>
-    </div>
+    <div class="m-t-30"><img class="zmdi-hc-spin" src="{{asset('assets/images/logo.svg')}}" width="48" height="48" alt="قطب نما"></div>
+    <p>لطفا صبر کنید ...</p>
+</div>
 </div>
 <!-- Overlay For Sidebars -->
 <div class="overlay"></div>
@@ -21,78 +21,80 @@
     <div class="col-12">
         <div class="navbar-header">
             <a href="javascript:void(0);" class="bars"></a>
-            <a class="navbar-brand" href="index.html"><img src="assets/images/logo.svg" width="30" alt="قطب نما"><span class="m-r-10">قطب نما</span></a>
-        </div>
-        <ul class="nav navbar-nav navbar-right">
-            <li><a href="javascript:void(0);" class="ls-toggle-btn" data-close="true"><i class="zmdi zmdi-swap"></i></a></li>
-            <li class="hidden-sm-down">
-                <div class="input-group">
-                    <input type="text" class="form-control" placeholder="جستجو...">
-                    <span class="input-group-addon">
-                        <i class="zmdi zmdi-search"></i>
-                    </span>
-                </div>
-            </li>
-        </ul>
-        <ul class="nav navbar-nav navbar-left">
-            <li class="dropdown"> <a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown" role="button"><i class="zmdi zmdi-notifications"></i>
-                <div class="notify"><span class="heartbit"></span><span class="point"></span></div>
-                </a>
-                <ul class="dropdown-menu dropdown-menu-right slideDown">
-                    <li class="header">اعلان ها</li>
-                    <li class="body">
-                        <ul class="menu list-unstyled">
-                            <li> <a href="javascript:void(0);">
-                                <div class="icon-circle bg-blue"><i class="zmdi zmdi-account"></i></div>
-                                <div class="menu-info">
-                                    <h4>8 عضو جدید به ما پیوستند </h4>
-                                    <p><i class="zmdi zmdi-time"></i> 14 دقیقه پیش
- </p>
-                                </div>
+            <a class="navbar-brand" href="index.html">
+                <img src="{{asset('assets/images/logo.svg')}}" width="30" alt="قطب نما"><span class="m-r-10">قطب نما</span></a>
+            </div>
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="javascript:void(0);" class="ls-toggle-btn" data-close="true"><i class="zmdi zmdi-swap"></i></a></li>
+                <li class="hidden-sm-down">
+                    <div class="input-group">
+                        <input type="text" class="form-control" placeholder="جستجو...">
+                        <span class="input-group-addon">
+                            <i class="zmdi zmdi-search"></i>
+                        </span>
+                    </div>
+                </li>
+            </ul>
+            <ul class="nav navbar-nav navbar-left">
+                <li class="dropdown">
+                    <a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown" role="button"><i class="zmdi zmdi-notifications"></i>
+                        <div class="notify"><span class="heartbit"></span><span class="point"></span></div>
+                    </a>
+                    <ul class="dropdown-menu dropdown-menu-right slideDown">
+                        <li class="header">اعلان ها</li>
+                        <li class="body">
+                            <ul class="menu list-unstyled">
+                                <li> <a href="javascript:void(0);">
+                                    <div class="icon-circle bg-blue"><i class="zmdi zmdi-account"></i></div>
+                                    <div class="menu-info">
+                                        <h4>8 عضو جدید به ما پیوستند </h4>
+                                        <p><i class="zmdi zmdi-time"></i> 14 دقیقه پیش
+                                        </p>
+                                    </div>
                                 </a> </li>
-                            <li> <a href="javascript:void(0);">
-                                <div class="icon-circle bg-amber"><i class="zmdi zmdi-shopping-cart"></i></div>
-                                <div class="menu-info">
-                                    <h4>4 فروش انجام شده است</h4>
-                                    <p> <i class="zmdi zmdi-time"></i> 22 دقیقه پیش </p>
-                                </div>
+                                <li> <a href="javascript:void(0);">
+                                    <div class="icon-circle bg-amber"><i class="zmdi zmdi-shopping-cart"></i></div>
+                                    <div class="menu-info">
+                                        <h4>4 فروش انجام شده است</h4>
+                                        <p> <i class="zmdi zmdi-time"></i> 22 دقیقه پیش </p>
+                                    </div>
                                 </a> </li>
-                            <li> <a href="javascript:void(0);">
-                                <div class="icon-circle bg-red"><i class="zmdi zmdi-delete"></i></div>
-                                <div class="menu-info">
-                                    <h4><b>ز خطاط </b>حسابش را حذف کرد </h4>
-                                    <p> <i class="zmdi zmdi-time"></i> 3 ساعت پیش  </p>
-                                </div>
+                                <li> <a href="javascript:void(0);">
+                                    <div class="icon-circle bg-red"><i class="zmdi zmdi-delete"></i></div>
+                                    <div class="menu-info">
+                                        <h4><b>ز خطاط </b>حسابش را حذف کرد </h4>
+                                        <p> <i class="zmdi zmdi-time"></i> 3 ساعت پیش  </p>
+                                    </div>
                                 </a> </li>
-                            <li> <a href="javascript:void(0);">
-                                <div class="icon-circle bg-green"><i class="zmdi zmdi-edit"></i></div>
-                                <div class="menu-info">
-                                    <h4><b>ز خطاط</b> نام پروفایلش را عوض کرد </h4>
-                                    <p> <i class="zmdi zmdi-time"></i> 2 ساعت پیش
- </p>
-                                </div>
+                                <li> <a href="javascript:void(0);">
+                                    <div class="icon-circle bg-green"><i class="zmdi zmdi-edit"></i></div>
+                                    <div class="menu-info">
+                                        <h4><b>ز خطاط</b> نام پروفایلش را عوض کرد </h4>
+                                        <p> <i class="zmdi zmdi-time"></i> 2 ساعت پیش
+                                        </p>
+                                    </div>
                                 </a> </li>
-                            <li> <a href="javascript:void(0);">
-                                <div class="icon-circle bg-grey"><i class="zmdi zmdi-comment-text"></i></div>
-                                <div class="menu-info">
-                                    <h4><b>ع سجادی</b>  درباره پست شما نظر داد</h4>
-                                    <p> <i class="zmdi zmdi-time"></i> 4 ساعت پیش </p>
-                                </div>
+                                <li> <a href="javascript:void(0);">
+                                    <div class="icon-circle bg-grey"><i class="zmdi zmdi-comment-text"></i></div>
+                                    <div class="menu-info">
+                                        <h4><b>ع سجادی</b>  درباره پست شما نظر داد</h4>
+                                        <p> <i class="zmdi zmdi-time"></i> 4 ساعت پیش </p>
+                                    </div>
                                 </a> </li>
-                            <li> <a href="javascript:void(0);">
-                                <div class="icon-circle bg-purple"><i class="zmdi zmdi-refresh"></i></div>
-                                <div class="menu-info">
-                                    <h4><b> ع سجادی </b>استوس خود را به روز کرد </h4>
-                                    <p> <i class="zmdi zmdi-time"></i> 3 ساعت پیش
- </p>
-                                </div>
+                                <li> <a href="javascript:void(0);">
+                                    <div class="icon-circle bg-purple"><i class="zmdi zmdi-refresh"></i></div>
+                                    <div class="menu-info">
+                                        <h4><b> ع سجادی </b>استوس خود را به روز کرد </h4>
+                                        <p> <i class="zmdi zmdi-time"></i> 3 ساعت پیش
+                                        </p>
+                                    </div>
                                 </a> </li>
-                            <li> <a href="javascript:void(0);">
-                                <div class="icon-circle bg-light-blue"><i class="zmdi zmdi-settings"></i></div>
-                                <div class="menu-info">
-                                    <h4>به روز رسانی تنظیمات</h4>
-                                    <p> <i class="zmdi zmdi-time"></i> دیروز </p>
-                                </div>
+                                <li> <a href="javascript:void(0);">
+                                    <div class="icon-circle bg-light-blue"><i class="zmdi zmdi-settings"></i></div>
+                                    <div class="menu-info">
+                                        <h4>به روز رسانی تنظیمات</h4>
+                                        <p> <i class="zmdi zmdi-time"></i> دیروز </p>
+                                    </div>
                                 </a>
                             </li>
                         </ul>
@@ -102,81 +104,81 @@
             </li>
             <li class="dropdown"> <a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown" role="button"><i class="zmdi zmdi-flag"></i>
                 <div class="notify"><span class="heartbit"></span><span class="point"></span></div>
-                </a>
-                <ul class="dropdown-menu dropdown-menu-right slideDown">
-                    <li class="header">وظایف</li>
-                    <li class="body">
-                        <ul class="menu tasks list-unstyled">
-                            <li> <a href="javascript:void(0);">
-                                <div class="progress-container progress-primary">
-                                    <span class="progress-badge"> شماره صفحه </span>
-                                    <div class="progress">
-                                        <div class="progress-bar progress-bar-warning" role="progressbar" aria-valuenow="86" aria-valuemin="0" aria-valuemax="100" style="width: 86%;">
-                                            <span class="progress-value">86%</span>
-                                        </div>
+            </a>
+            <ul class="dropdown-menu dropdown-menu-right slideDown">
+                <li class="header">وظایف</li>
+                <li class="body">
+                    <ul class="menu tasks list-unstyled">
+                        <li> <a href="javascript:void(0);">
+                            <div class="progress-container progress-primary">
+                                <span class="progress-badge"> شماره صفحه </span>
+                                <div class="progress">
+                                    <div class="progress-bar progress-bar-warning" role="progressbar" aria-valuenow="86" aria-valuemin="0" aria-valuemax="100" style="width: 86%;">
+                                        <span class="progress-value">86%</span>
                                     </div>
                                 </div>
-                                </a>
-                            </li>
-                            <li> <a href="javascript:void(0);">
-                                <div class="progress-container progress-info">
-                                    <span class="progress-badge"> به سؤالات GitHub پاسخ دهید </span>
-                                    <div class="progress">
-                                        <div class="progress-bar progress-bar-warning" role="progressbar" aria-valuenow="35" aria-valuemin="0" aria-valuemax="100" style="width: 35%;">
-                                            <span class="progress-value">35%</span>
-                                        </div>
-                                    </div>
-                                </div>
-                                </a>
-                            </li>
-                            <li> <a href="javascript:void(0);">
-                                <div class="progress-container progress-success">
-                                    <span class="progress-badge"> حل مسئله انتقال </span>
-                                    <div class="progress">
-                                        <div class="progress-bar progress-bar-warning" role="progressbar" aria-valuenow="72" aria-valuemin="0" aria-valuemax="100" style="width: 72%;">
-                                            <span class="progress-value">72%</span>
-                                        </div>
-                                    </div>
-                                </div>
-                                </a>
-                            </li>
-                            <li><a href="javascript:void(0);">
-                                <div class="progress-container">
-                                    <span class="progress-badge"> داشبورد جدید ایجاد کنید </span>
-                                    <div class="progress">
-                                        <div class="progress-bar progress-bar-warning" role="progressbar" aria-valuenow="45" aria-valuemin="0" aria-valuemax="100" style="width: 45%;">
-                                            <span class="progress-value">45%</span>
-                                        </div>
-                                    </div>
-                                </div>
-                                </a>
-                            </li>
-                            <li> <a href="javascript:void(0);">
-                                <div class="progress-container progress-warning">
-                                    <span class="progress-badge"> پروژه های  در انتظار </span>
-                                    <div class="progress">
-                                        <div class="progress-bar progress-bar-warning" role="progressbar" aria-valuenow="29" aria-valuemin="0" aria-valuemax="100" style="width: 29%;">
-                                            <span class="progress-value">29%</span>
-                                        </div>
-                                    </div>
-                                </div>
-                                </a>
-                            </li>
-                        </ul>
+                            </div>
+                        </a>
                     </li>
-                    <li class="footer"><a href="javascript:void(0);">نمایش همه</a></li>
-                </ul>
+                    <li> <a href="javascript:void(0);">
+                        <div class="progress-container progress-info">
+                            <span class="progress-badge"> به سؤالات GitHub پاسخ دهید </span>
+                            <div class="progress">
+                                <div class="progress-bar progress-bar-warning" role="progressbar" aria-valuenow="35" aria-valuemin="0" aria-valuemax="100" style="width: 35%;">
+                                    <span class="progress-value">35%</span>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </li>
+                <li> <a href="javascript:void(0);">
+                    <div class="progress-container progress-success">
+                        <span class="progress-badge"> حل مسئله انتقال </span>
+                        <div class="progress">
+                            <div class="progress-bar progress-bar-warning" role="progressbar" aria-valuenow="72" aria-valuemin="0" aria-valuemax="100" style="width: 72%;">
+                                <span class="progress-value">72%</span>
+                            </div>
+                        </div>
+                    </div>
+                </a>
             </li>
-            <li>
-                <a href="javascript:void(0);" class="fullscreen hidden-sm-down" data-provide="fullscreen" data-close="true"><i class="zmdi zmdi-fullscreen"></i></a>
-            </li>
-            <li><a href="sign-in.html" class="mega-menu" data-close="true"><i class="zmdi zmdi-power"></i></a></li>
-            <li class=""><a href="javascript:void(0);" class="js-right-sidebar" data-close="true"><i class="zmdi zmdi-settings zmdi-hc-spin"></i></a></li>
-        </ul>
-    </div>
+            <li><a href="javascript:void(0);">
+                <div class="progress-container">
+                    <span class="progress-badge"> داشبورد جدید ایجاد کنید </span>
+                    <div class="progress">
+                        <div class="progress-bar progress-bar-warning" role="progressbar" aria-valuenow="45" aria-valuemin="0" aria-valuemax="100" style="width: 45%;">
+                            <span class="progress-value">45%</span>
+                        </div>
+                    </div>
+                </div>
+            </a>
+        </li>
+        <li> <a href="javascript:void(0);">
+            <div class="progress-container progress-warning">
+                <span class="progress-badge"> پروژه های  در انتظار </span>
+                <div class="progress">
+                    <div class="progress-bar progress-bar-warning" role="progressbar" aria-valuenow="29" aria-valuemin="0" aria-valuemax="100" style="width: 29%;">
+                        <span class="progress-value">29%</span>
+                    </div>
+                </div>
+            </div>
+        </a>
+    </li>
+</ul>
+</li>
+<li class="footer"><a href="javascript:void(0);">نمایش همه</a></li>
+</ul>
+</li>
+<li>
+    <a href="javascript:void(0);" class="fullscreen hidden-sm-down" data-provide="fullscreen" data-close="true"><i class="zmdi zmdi-fullscreen"></i></a>
+</li>
+<li><a href="sign-in.html" class="mega-menu" data-close="true"><i class="zmdi zmdi-power"></i></a></li>
+<li class=""><a href="javascript:void(0);" class="js-right-sidebar" data-close="true"><i class="zmdi zmdi-settings zmdi-hc-spin"></i></a></li>
+</ul>
+</div>
 </nav>
 
-@include('home.partials.admin_sidebar')
+@include('home.partials.'.user_type().'_sidebar')
 
 <!-- Right Sidebar -->
 <aside id="rightsidebar" class="right-sidebar">
@@ -288,7 +290,7 @@
                         <li class="online">
                             <a href="javascript:void(0);">
                                 <div class="media">
-                                    <img class="media-object " src="assets/images/xs/avatar4.jpg" alt="">
+                                    <img class="media-object " src="{{('assets/images/xs/avatar4.jpg')}}" alt="">
                                     <div class="media-body">
                                         <span class="name">س ناصر</span>
                                         <span class="message">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است.</span>
@@ -300,7 +302,7 @@
                         <li class="online">
                             <a href="javascript:void(0);">
                                 <div class="media">
-                                    <img class="media-object " src="assets/images/xs/avatar5.jpg" alt="">
+                                    <img class="media-object " src="{{('assets/images/xs/avatar5.jpg')}}" alt="">
                                     <div class="media-body">
                                         <span class="name">س غلامی</span>
                                         <span class="message">در این صورت می توان امید داشت که تمام و دشواری موجود در ارائه راهکارها و شرایط سخت تایپ به پایان رسد</span>
@@ -312,7 +314,7 @@
                         <li class="offline">
                             <a href="javascript:void(0);">
                                 <div class="media">
-                                    <img class="media-object " src="assets/images/xs/avatar2.jpg" alt="">
+                                    <img class="media-object " src="{{('assets/images/xs/avatar2.jpg')}}" alt="">
                                     <div class="media-body">
                                         <span class="name">ا احمدی</span>
                                         <span class="message">با نرم افزارها شناخت بیشتری را برای طراحان رایانه ای علی الخصوص طراحان خلاقی و فرهنگ پیشرو در زبان فارسی ایجاد کرد.</span>
@@ -324,7 +326,7 @@
                         <li class="me">
                             <a href="javascript:void(0);">
                                 <div class="media">
-                                    <img class="media-object " src="assets/images/xs/avatar1.jpg" alt="">
+                                    <img class="media-object " src="{{('assets/images/xs/avatar1.jpg')}}" alt="">
                                     <div class="media-body">
                                         <span class="name">ث قاسمی</span>
                                         <span class="message">کتابهای زیادی در شصت و سه درصد گذشته، حال و آینده شناخت فراوان جامعه و متخصصان را می طلبد</span>
@@ -336,7 +338,7 @@
                         <li class="online">
                             <a href="javascript:void(0);">
                                 <div class="media">
-                                    <img class="media-object " src="assets/images/xs/avatar3.jpg" alt="">
+                                    <img class="media-object " src="{{('assets/images/xs/avatar3.jpg')}}" alt="">
                                     <div class="media-body">
                                         <span class="name">ف رحمتی</span>
                                         <span class="message">ریچارد مک کلینتوک ، استاد لاتین</span>
@@ -353,7 +355,7 @@
                         <li class="offline inlineblock">
                             <a href="javascript:void(0);">
                                 <div class="media">
-                                    <img class="media-object " src="assets/images/xs/avatar10.jpg" alt="">
+                                    <img class="media-object " src="{{('assets/images/xs/avatar10.jpg')}}" alt="">
                                     <div class="media-body">
                                         <span class="badge badge-outline status"></span>
                                     </div>
@@ -363,7 +365,7 @@
                         <li class="offline inlineblock">
                             <a href="javascript:void(0);">
                                 <div class="media">
-                                    <img class="media-object " src="assets/images/xs/avatar6.jpg" alt="">
+                                    <img class="media-object " src="{{('assets/images/xs/avatar6.jpg')}}" alt="">
                                     <div class="media-body">
                                         <span class="badge badge-outline status"></span>
                                     </div>
@@ -373,7 +375,7 @@
                         <li class="offline inlineblock">
                             <a href="javascript:void(0);">
                                 <div class="media">
-                                    <img class="media-object " src="assets/images/xs/avatar7.jpg" alt="">
+                                    <img class="media-object " src="{{('assets/images/xs/avatar7.jpg')}}" alt="">
                                     <div class="media-body">
                                         <span class="badge badge-outline status"></span>
                                     </div>
@@ -383,7 +385,7 @@
                         <li class="offline inlineblock">
                             <a href="javascript:void(0);">
                                 <div class="media">
-                                    <img class="media-object " src="assets/images/xs/avatar8.jpg" alt="">
+                                    <img class="media-object " src="{{('assets/images/xs/avatar8.jpg')}}" alt="">
                                     <div class="media-body">
                                         <span class="badge badge-outline status"></span>
                                     </div>
@@ -393,7 +395,7 @@
                         <li class="offline inlineblock">
                             <a href="javascript:void(0);">
                                 <div class="media">
-                                    <img class="media-object " src="assets/images/xs/avatar9.jpg" alt="">
+                                    <img class="media-object " src="{{('assets/images/xs/avatar9.jpg')}}" alt="">
                                     <div class="media-body">
                                         <span class="badge badge-outline status"></span>
                                     </div>
@@ -403,7 +405,7 @@
                         <li class="online inlineblock">
                             <a href="javascript:void(0);">
                                 <div class="media">
-                                    <img class="media-object " src="assets/images/xs/avatar5.jpg" alt="">
+                                    <img class="media-object " src="{{('assets/images/xs/avatar5.jpg')}}" alt="">
                                     <div class="media-body">
                                         <span class="badge badge-outline status"></span>
                                     </div>
@@ -597,31 +599,31 @@
         </div>
         <div class="body">
             <div class="chat-widget">
-            <ul class="chat-scroll-list clearfix">
-                <li class="left float-left">
-                    <img src="assets/images/xs/avatar3.jpg" class="rounded-circle" alt="">
-                    <div class="chat-info">
-                        <a class="name" href="#">سروش پویانفر</a>
-                        <span class="datetime">6:12</span>
-                        <span class="message">سلام عباس جان </span>
-                    </div>
-                </li>
-                <li class="right">
-                    <div class="chat-info"><span class="datetime">6:15</span> <span class="message">سلام سروش جان <br>چطوری ؟</span> </div>
-                </li>
-                <li class="right">
-                    <div class="chat-info"><span class="datetime">6:16</span> <span class="message">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است.</span> </div>
-                </li>
-                <li class="left float-left"> <img src="assets/images/xs/avatar2.jpg" class="rounded-circle" alt="">
-                    <div class="chat-info"> <a class="name" href="#">سارا رفیعی</a> <span class="datetime">6:25</span> <span class="message">سروش جان <br>  عباس جان سلام <br> امروز چه کاری را باید انجام بدهیم ؟</span> </div>
-                </li>
-                <li class="left float-left"> <img src="assets/images/xs/avatar1.jpg" class="rounded-circle" alt="">
-                    <div class="chat-info"> <a class="name" href="#">وحید محمدی</a> <span class="datetime">6:28</span> <span class="message">من دوست دارم به تیم بپیوندم. </span> </div>
-                </li>
+                <ul class="chat-scroll-list clearfix">
+                    <li class="left float-left">
+                        <img src="assets/images/xs/avatar3.jpg" class="rounded-circle" alt="">
+                        <div class="chat-info">
+                            <a class="name" href="#">سروش پویانفر</a>
+                            <span class="datetime">6:12</span>
+                            <span class="message">سلام عباس جان </span>
+                        </div>
+                    </li>
                     <li class="right">
-                    <div class="chat-info"><span class="datetime">7:02</span> <span class="message">سلام  <br>وحید جان</span> </div>
-                </li>
-            </ul>
+                        <div class="chat-info"><span class="datetime">6:15</span> <span class="message">سلام سروش جان <br>چطوری ؟</span> </div>
+                    </li>
+                    <li class="right">
+                        <div class="chat-info"><span class="datetime">6:16</span> <span class="message">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است.</span> </div>
+                    </li>
+                    <li class="left float-left"> <img src="assets/images/xs/avatar2.jpg" class="rounded-circle" alt="">
+                        <div class="chat-info"> <a class="name" href="#">سارا رفیعی</a> <span class="datetime">6:25</span> <span class="message">سروش جان <br>  عباس جان سلام <br> امروز چه کاری را باید انجام بدهیم ؟</span> </div>
+                    </li>
+                    <li class="left float-left"> <img src="assets/images/xs/avatar1.jpg" class="rounded-circle" alt="">
+                        <div class="chat-info"> <a class="name" href="#">وحید محمدی</a> <span class="datetime">6:28</span> <span class="message">من دوست دارم به تیم بپیوندم. </span> </div>
+                    </li>
+                    <li class="right">
+                        <div class="chat-info"><span class="datetime">7:02</span> <span class="message">سلام  <br>وحید جان</span> </div>
+                    </li>
+                </ul>
             </div>
             <div class="input-group p-t-15">
                 <input type="text" class="form-control" placeholder="متن را اینجا وارد کنید ...">

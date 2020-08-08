@@ -4,7 +4,7 @@
         <ul class="list">
             <li>
                 <div class="user-info">
-                    <div class="image"><a href="profile.html"><img src="assets/images/profile_av.jpg" alt="کاربر"></a></div>
+                    <div class="image"><a href="profile.html"><img src="{{asset('assets/images/profile_av.jpg')}}" alt="کاربر"></a></div>
                     <div class="detail">
                         <h4>حمید مجیدی</h4>
                         <small> طراح UI UX </small>
@@ -19,9 +19,9 @@
 
             <li class="active open"> <a href="javascript:void(0);" class="menu-toggle"><i class="zmdi zmdi-account"></i><span>افراد</span></a>
                 <ul class="ml-menu">
-                    <li class="active"><a href="index.html">ثبت مشتری جدید</a> </li>
-                    <li><a href="dashboard-rtl.html">لیست مشتریان</a></li>
-                    <li><a href="index2.html">گروه مشتریان</a></li>
+                    <li class="active"><a href="{{url('customers/create')}}">ثبت مشتری جدید</a> </li>
+                    <li><a href="{{url('customers')}}">لیست مشتریان</a></li>
+                    <li><a href="#">گروه مشتریان</a></li>
                     <li><a href="ec-dashboard.html">گزارشگیری مشتری</a></li>
                 </ul>
             </li>
