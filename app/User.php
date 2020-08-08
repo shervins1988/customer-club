@@ -48,4 +48,5 @@ class User extends Authenticatable
         $this->password = bcrypt($string);
         $this->save();
     }
+
 }

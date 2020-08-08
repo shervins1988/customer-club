@@ -81,7 +81,7 @@ public function __construct()
         $user = auth()->user();
         $request->validate([
             'name' => 'nullable|string|min:3|max:200',
-            'mobile' => 'nullable|string|digits:11',
+            'mobile' => 'nullable|string|digits:11|unique:users,mobile,'. $user->id,
             'new_password' => 'nullable|string|min:8|max:40',
             'current_password' => 'required',
         ]);
@@ -107,7 +107,7 @@ public function __construct()
 
             $user->update($data);
             $message = 'پروفایل کاربری شما با موفقیت ویرایش شد.';
-            
+
             if ($logout) {
                 \Auth::logout();
                 return redirect('login')->withMessage($message);
