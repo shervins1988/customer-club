@@ -42,4 +42,10 @@ class User extends Authenticatable
         $this->mobile_verified_at = null;
         $this->save();
     }
+
+    public function update_password($string)
+    {
+        $this->password = bcrypt($string);
+        $this->save();
+    }
 }
