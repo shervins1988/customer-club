@@ -17,3 +17,7 @@
     <!-- noUISlider Css -->
     <link rel="stylesheet" href="{{asset('assets/plugins/nouislider/nouislider.min.css')}}" />
     <!-- Custom Css -->
+    <!-- Bootstrap Material Datetime Picker Css -->
+    <link href="{{asset('assets/plugins/bootstrap-material-datetimepicker/css/bootstrap-material-datetimepicker.css')}}" rel="stylesheet" />
+    <!-- Bootstrap Select Css -->
+    <link href="{{asset('assets/plugins/bootstrap-select/css/bootstrap-select.css')}}" rel="stylesheet" />

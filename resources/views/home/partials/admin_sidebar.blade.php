@@ -6,14 +6,17 @@
                 <div class="user-info">
                     <div class="image"><a href="profile.html"><img src="{{asset('assets/images/profile_av.jpg')}}" alt="کاربر"></a></div>
                     <div class="detail">
-                        <h4>حمید مجیدی</h4>
+                        <h4>{{auth()->user()->name}}</h4>
                         <small> طراح UI UX </small>
                     </div>
-                    <a href="events.html" title="رویدادها"><i class="zmdi zmdi-calendar"></i></a>
+                    <a href="{{url('acc')}}" title="ویرایش حساب کاربری"><i class="zmdi zmdi-account"></i></a>
                     <a href="mail-inbox.html" title="صندوق ورودی"><i class="zmdi zmdi-email"></i></a>
                     <a href="contact.html" title="لیست مخاطبین"><i class="zmdi zmdi-account-box-phone"></i></a>
                     <a href="chat.html" title="برنامه چت"><i class="zmdi zmdi-comments"></i></a>
-                    <a href="sign-in.html" title="خروج از سیستم"><i class="zmdi zmdi-power"></i></a>
+                    <a href="javascript:void" onclick="document.getElementById('logout-form').submit()" title="خروج از سیستم"><i class="zmdi zmdi-power"></i></a>
+                    <form id="logout-form" action="{{route('logout')}}" method="post">
+                        @csrf
+                    </form>
                 </div>
             </li>
 
