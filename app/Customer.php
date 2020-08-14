@@ -22,7 +22,7 @@ class Customer extends Model
         $code_num = random_string(6);
         $customer = new self;
         $customer->user_id = $user_id;
-        $customer->birthday = now();
+        $customer->birthday = shamsi_to_miladi($birthday);
         $customer->code_num = $code_num;
         $customer->male = $male;
         $customer->save();
