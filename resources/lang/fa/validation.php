@@ -112,7 +112,7 @@ return [
     'starts_with' => 'The :attribute must start with one of the following: :values',
     'string' => 'The :attribute must be a string.',
     'timezone' => 'The :attribute must be a valid zone.',
-    'unique' => 'با این شماره:attribute قبلا" ثبت نام شده اس."',
+    'unique' => 'با این شماره  :attribute قبلا" ثبت نام شده اس."',
     'uploaded' => 'The :attribute failed to upload.',
     'url' => 'The :attribute format is invalid.',
     'uuid' => 'The :attribute must be a valid UUID.',
@@ -151,6 +151,7 @@ return [
         'name' => 'نام',
         'new_password' => 'رمز عبور جدید',
         'current_password' => 'رمز عبور فعلی',
+        'last_name' => 'نام خانوادگی',
     ],
 
 ];

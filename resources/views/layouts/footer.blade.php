@@ -22,6 +22,8 @@
     <script src="{{asset('assets/plugins/nouislider/nouislider.js')}}"></script> <!-- noUISlider Plugin Js -->
 
     <script src="{{asset('assets/js/pages/forms/advanced-form-elements.js')}}"></script>
+    <script src="{{asset('assets/js/pdp.js')}}"></script>
+    <script src="{{asset('assets/js/date-picker.js')}}"></script>
 
 
 </boassetdy>

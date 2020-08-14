@@ -4,7 +4,8 @@
     <link rel="stylesheet" href="{{asset('assets/plugins/jvectormap/jquery-jvectormap-2.0.3.min.css')}}"/>
     <link rel="stylesheet" href="{{asset('assets/plugins/morrisjs/morris.min.css')}}" />
     <link rel="stylesheet" href="{{asset('assets/css/main.css')}}">
-    <link rel="stylesheet" href="{{asset('assets/css/color_skins.css')}}">
+    <link rel="stylesheet" href="{{asset('assets/css/main.css')}}">
+    <link rel="stylesheet" href="{{asset('css/main.css')}}">
 
     <!-- Multi Select Css -->
     <link rel="stylesheet" href="{{asset('assets/plugins/multi-select/css/multi-select.css')}}">
@@ -21,3 +22,4 @@
     <link href="{{asset('assets/plugins/bootstrap-material-datetimepicker/css/bootstrap-material-datetimepicker.css')}}" rel="stylesheet" />
     <!-- Bootstrap Select Css -->
     <link href="{{asset('assets/plugins/bootstrap-select/css/bootstrap-select.css')}}" rel="stylesheet" />
+    <link href="{{asset('assets/css/pdp.css')}}" rel="stylesheet" />

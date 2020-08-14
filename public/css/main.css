@@ -3,3 +3,24 @@ body{
     text-align: right;
     font-family: 'nunito','Lalezar', 'Nunito';
 }
+.checkbox, .radio{
+        margin-bottom: -8px !important;
+}
+
+.card .header .head{
+    top: -16px !important;
+    text-align: center !important;
+    right: 5px !important;
+}
+
+ .mth{
+ position: absolute;
+ top: 5px;
+ left: 37px;
+ list-style: none;
+}
+.position{
+    top: 7px;
+position: relative;
+font-size: 19px !important;
+}

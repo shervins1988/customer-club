@@ -25,4 +25,4 @@ Route::get('/acc','UserController@acc')->name('acc');
 Route::post('/acc','UserController@update');
 
 //Resource Controller
-Route::resource('customers','CustomerController');
+Route::resource('customers', 'CustomerController');

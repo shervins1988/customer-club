@@ -4,11 +4,14 @@
 @endsection
 @section('content')
     <section class="content home">
+
         <div class="block-header">
+
+                @include('fragments.alerts')
             <div class="row">
                 <div class="col-lg-7 col-md-6 col-sm-12">
                     <h2>داشبورد
-                    <small class="text-muted">به قطب نما خوش آمدید</small>
+                        <small class="text-muted">به قطب نما خوش آمدید</small>
                     </h2>
                 </div>
                 <div class="col-lg-5 col-md-6 col-sm-12">
@@ -38,7 +41,7 @@
                                 </div>
                                 <div class="col-12">
                                     <div class="progress m-t-20">
-                                    <div class="progress-bar l-amber" role="progressbar" aria-valuenow="45" aria-valuemin="0" aria-valuemax="100" style="width: 45%;"></div>
+                                        <div class="progress-bar l-amber" role="progressbar" aria-valuenow="45" aria-valuemin="0" aria-valuemax="100" style="width: 45%;"></div>
                                     </div>
                                 </div>
                             </div>
@@ -57,7 +60,7 @@
                                 </div>
                                 <div class="col-12">
                                     <div class="progress m-t-20">
-                                    <div class="progress-bar l-blue" role="progressbar" aria-valuenow="38" aria-valuemin="0" aria-valuemax="100" style="width: 38%;"></div>
+                                        <div class="progress-bar l-blue" role="progressbar" aria-valuenow="38" aria-valuemin="0" aria-valuemax="100" style="width: 38%;"></div>
                                     </div>
                                 </div>
                             </div>
@@ -76,7 +79,7 @@
                                 </div>
                                 <div class="col-12">
                                     <div class="progress m-t-20">
-                                    <div class="progress-bar l-parpl" role="progressbar" aria-valuenow="39" aria-valuemin="0" aria-valuemax="100" style="width: 39%;"></div>
+                                        <div class="progress-bar l-parpl" role="progressbar" aria-valuenow="39" aria-valuemin="0" aria-valuemax="100" style="width: 39%;"></div>
                                     </div>
                                 </div>
                             </div>
@@ -95,7 +98,7 @@
                                 </div>
                                 <div class="col-12">
                                     <div class="progress m-t-20">
-                                    <div class="progress-bar l-turquoise" role="progressbar" aria-valuenow="89" aria-valuemin="0" aria-valuemax="100" style="width: 89%;"></div>
+                                        <div class="progress-bar l-turquoise" role="progressbar" aria-valuenow="89" aria-valuemin="0" aria-valuemax="100" style="width: 89%;"></div>
                                     </div>
                                 </div>
                             </div>
@@ -454,7 +457,7 @@
                                                     </li>
                                                 </ul>
                                             </td>
-                                           <td class="hidden-md-down">
+                                            <td class="hidden-md-down">
                                                 <div class="progress">
                                                     <div class="progress-bar l-blue" role="progressbar" aria-valuenow="30" aria-valuemin="0" aria-valuemax="100" style="width: 30%;"></div>
                                                 </div>
@@ -562,25 +565,25 @@
                         <table class="table table-striped m-b-0">
                             <tbody>
                                 <tr>
-                                <td> باد </td>
-                                <td class="font-medium">ESE 17 mph</td>
-                            </tr>
-                            <tr>
-                                <td> رطوبت </td>
-                                <td class="font-medium">72%</td>
-                            </tr>
-                            <tr>
-                                <td> فشار </td>
-                                <td class="font-medium">25.56 in</td>
-                            </tr>
-                            <tr>
-                                <td>پوشش ابر</td>
-                                <td class="font-medium">80%</td>
-                            </tr>
-                            <tr>
-                                <td> حد پرواز</td>
-                                <td class="font-medium">25280 ft</td>
-                            </tr>
+                                    <td> باد </td>
+                                    <td class="font-medium">ESE 17 mph</td>
+                                </tr>
+                                <tr>
+                                    <td> رطوبت </td>
+                                    <td class="font-medium">72%</td>
+                                </tr>
+                                <tr>
+                                    <td> فشار </td>
+                                    <td class="font-medium">25.56 in</td>
+                                </tr>
+                                <tr>
+                                    <td>پوشش ابر</td>
+                                    <td class="font-medium">80%</td>
+                                </tr>
+                                <tr>
+                                    <td> حد پرواز</td>
+                                    <td class="font-medium">25280 ft</td>
+                                </tr>
                             </tbody>
                         </table>
                         <div class="carousel slide" data-ride="carousel">
@@ -611,7 +614,7 @@
                                                 <img src="assets/images/weather/sky.svg" alt="">
                                             </li>
                                             <li class="day col-4">
-                                               <p>چهار شنبه</p>
+                                                <p>چهار شنبه</p>
                                                 <img src="assets/images/weather/cloudy.svg" alt="">
                                             </li>
                                             <li class="day col-4">
@@ -655,7 +658,7 @@
                                         <div class="body">
                                             <i class="zmdi zmdi-account text-success"></i>
                                             <h4>2,055</h4>
-                                           <span>بازدید از پروفایل</span>
+                                            <span>بازدید از پروفایل</span>
                                         </div>
                                     </li>
                                 </ul>
@@ -721,28 +724,28 @@
                             <div class="card">
                                 <div class="header">
                                     <h2>بررسی
-     <strong> فروش </strong></h2>
-                                    <ul class="header-dropdown">
-                                        <li class="dropdown"> <a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"> <i class="zmdi zmdi-more"></i> </a>
-                                            <ul class="dropdown-menu dropdown-menu-right slideUp float-right">
-                                                <li><a href="javascript:void(0);">ویرایش</a></li>
-                                                <li><a href="javascript:void(0);">حذف</a></li>
-                                                <li><a href="javascript:void(0);">گزارش</a></li>
-                                            </ul>
-                                        </li>
-                                        <li class="remove">
-                                            <a role="button" class="boxs-close"><i class="zmdi zmdi-close"></i></a>
-                                        </li>
-                                    </ul>
-                                </div>
-                                <div class="body">
-                                    <div id="m_area_chart2" style="height: 290px"></div>
+                                        <strong> فروش </strong></h2>
+                                        <ul class="header-dropdown">
+                                            <li class="dropdown"> <a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"> <i class="zmdi zmdi-more"></i> </a>
+                                                <ul class="dropdown-menu dropdown-menu-right slideUp float-right">
+                                                    <li><a href="javascript:void(0);">ویرایش</a></li>
+                                                    <li><a href="javascript:void(0);">حذف</a></li>
+                                                    <li><a href="javascript:void(0);">گزارش</a></li>
+                                                </ul>
+                                            </li>
+                                            <li class="remove">
+                                                <a role="button" class="boxs-close"><i class="zmdi zmdi-close"></i></a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="body">
+                                        <div id="m_area_chart2" style="height: 290px"></div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
-@endsection
+        </section>
+    @endsection
