@@ -17,10 +17,21 @@ function shamsi_to_miladi($string, $sep='/')
     }
 }
 
+function carbon_to_jdate($carbon) {
+    return \Morilog\Jalali\Jalalian::fromDateTime($carbon);
+}
+
+
 function print_date($carbon)
 {
     $jDate = carbon_to_jdate($carbon);
     return $jDate->format('%A, %d %B %y');
+}
+
+function pdp($carbon)
+{
+    $jDate = carbon_to_jdate($carbon);
+    return $jDate->format('%Y/%m/%d');
 }
 
 

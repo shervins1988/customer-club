@@ -15,11 +15,7 @@
     <link rel="stylesheet" href="{{asset('assets/plugins/bootstrap-tagsinput/bootstrap-tagsinput.css')}}">
     <!-- Bootstrap Select Css -->
     <link rel="stylesheet" href="{{asset('assets/plugins/bootstrap-select/css/bootstrap-select.css')}}" />
-    <!-- noUISlider Css -->
-    <link rel="stylesheet" href="{{asset('assets/plugins/nouislider/nouislider.min.css')}}" />
-    <!-- Custom Css -->
-    <!-- Bootstrap Material Datetime Picker Css -->
-    <link href="{{asset('assets/plugins/bootstrap-material-datetimepicker/css/bootstrap-material-datetimepicker.css')}}" rel="stylesheet" />
+
     <!-- Bootstrap Select Css -->
     <link href="{{asset('assets/plugins/bootstrap-select/css/bootstrap-select.css')}}" rel="stylesheet" />
     <link href="{{asset('assets/css/pdp.css')}}" rel="stylesheet" />

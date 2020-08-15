@@ -84,7 +84,7 @@
                                  <i class="zmdi zmdi-more"></i> </a>
 
                             <div class="dropdown-menu text-right" aria-labelledby="link1">
-                                <a class="dropdown-item" href="#">
+                                <a class="dropdown-item" href="{{url("customers/$customer->id/edit")}}">
                                     <i class="material-icons position">mode_edit</i>
                                 ویرایش
                                 </a>

@@ -1,7 +1,11 @@
 @extends('layouts.dashboard')
 
 @section('meta')
-    <title>::ثبت مشتری جدید ::</title>
+    @if ($customer->id)
+        <title>:: ویرایش مشتری  ::</title>
+    @else
+        <title>::ثبت مشتری جدید ::</title>
+    @endif
 @endsection
 
 @section('content')
@@ -11,9 +15,16 @@
             @include('fragments.alerts')
             <div class="row">
                 <div class="col-lg-7 col-md-6 col-sm-12">
-                    <h2> افزودن مشتری جدید
-                        <small class="text-muted">به قطب نما خوش آمدید</small>
-                    </h2>
+                    @if ($customer->id)
+                        <h2> ویرایش مشتری
+                            <small class="text-muted">{{$customer->user->name}}</small>
+                        </h2>
+                    @else
+                        <h2>ثبت مشتری جدید
+                            <small class="text-muted">ایجاد پروفایل کاربری در باشگاه مشتریان مرکز کاشت فاطیما</small>
+                        </h2>
+                    @endif
+
                 </div>
                 <div class="col-lg-5 col-md-6 col-sm-12">
                     <ul class="breadcrumb float-md-left">
@@ -42,11 +53,14 @@
                                 </li>
                             </ul>
                         </div>
-                        <form class="row mx-auto" action="{{url('customers')}}" method="post">
+                        <form class="row mx-auto" action="{{url("customers/$customer->id")}}" method="post">
                             @csrf
+                            @if ($customer->id)
+                                @method('PUT')
+                            @endif
                             <div class="col-md-4  form-group">
                                 <label for="name">نام</label>
-                                <input type="text" name="name" value="{{old('name')}}" id="name" class="form-control">
+                                <input type="text" name="name" value="{{old('name') ?? $customer->user->name ?? null}}" id="name" class="form-control">
                             </div>
 
                             <div class="col-md-4 form-group">
@@ -59,11 +73,13 @@
                                 <label class="d-block"> جنسیت </label>
                                 <div class=" form-control text-center">
                                     <div class="radio inlineblock m-l-20">
-                                        <input type="radio" name="male" id="male" class="with-gap" value="0" @if (old('male')&& old('male') === "0") checked @endif>
+
+                <input type="radio" name="male" id="male" class="with-gap" value="1" @if((old('male') !== null && old('male') === "1") || old('male') === null && $customer->male === 1) checked @endif>
                                             <label for="male">آقا</label>
                                         </div>
                                         <div class="radio inlineblock">
-                                            <input type="radio" name="male" id="Female" class="with-gap" value="1" @if (old('male')&& old('male') === "1") checked @endif>
+
+                <input type="radio" name="male" id="Female" class="with-gap" value="0" @if((old('male') !== null && old('male') === "0") || old('male') === null && $customer->male === 0) checked @endif>
                                                 <label for="Female">خانم</label>
                                             </div>
                                         </div>
@@ -71,12 +87,12 @@
 
                                     <div class="col-md-4  form-group">
                                         <label for="birthday">تاریخ تولد</label>
-                                        <input type="text" name="birthday" value="{{old('birthday')}}"  id="birthday" class="form-control  pdp" autocomplete="off"  placeholder="لطفا تاریخ تولد را وارد نمایید...">
+                                        <input type="text" name="birthday" value="{{old('birthday') ?? $customer->birthday ? pdp($customer->birthday) : null}}"  id="birthday" class="form-control  pdp" autocomplete="off"  placeholder="لطفا تاریخ تولد را وارد نمایید...">
                                     </div>
 
                                     <div class="col-md-4  form-group">
                                         <label for="mobile">تلفن همراه</label>
-                                        <input type="text" name="mobile" value="{{old('mobile')}}" id="mobile" class="form-control mobile-phone-number"  placeholder="مثال : +00 (000) 000-00-00">
+                                        <input type="text" name="mobile" value="{{old('mobile') ?? $customer->user->mobile ?? null}}" id="mobile" class="form-control mobile-phone-number"  placeholder="مثال : +00 (000) 000-00-00">
                                     </div>
 
                                     <div class="col-md-4  form-group">
@@ -154,7 +170,15 @@
                                         <input id="file_name" class="form-control" name="file_name" type="file">
                                     </div>
 
-                                    <button type="submit" name="button" class="btn btn-raised btn-primary btn-round waves-effect mx-auto">ورود</button>
+                                    <button type="submit" name="button" class="btn btn-raised btn-primary btn-round waves-effect mx-auto">
+
+                                        @if ($customer->id)
+                                            ثبت تغییرات
+                                        @else
+                                            ایجاد
+                                        @endif
+
+                                    </button>
                                 </form>
 
                             </div>

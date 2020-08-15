@@ -9,6 +9,13 @@ use Illuminate\Http\Request;
 
 class CustomerController extends Controller
 {
+
+    public function __construct()
+    {
+        $this->middleware('auth');
+        $this->middleware('admin');
+    }
+
     /**
      * Display a listing of the resource.
      *
@@ -27,7 +34,8 @@ class CustomerController extends Controller
      */
     public function create()
     {
-        return view('customers.create');
+        $customer = new Customer;
+        return view('customers.create',compact('customer'));
     }
 
     /**
@@ -39,12 +47,8 @@ class CustomerController extends Controller
     public function store(Request $request)
     {
         // Form Information Validate
-        $request->validate([
-            'name' => 'required|string|min:3|max:200',
-            'male' => 'nullable',
-            'birthday' => 'nullable',
-            'mobile' => 'required|string|digits:11|unique:users,mobile',
-        ]);
+        self::validation();
+
         // Create UserAcounte for Customer
                 $password = rand(10000000,99999999);
                 $new_user = User::new_user($request->name,$request->mobile,$password);
@@ -88,7 +92,7 @@ class CustomerController extends Controller
      */
     public function edit(Customer $customer)
     {
-        //
+        return view('customers.create',compact('customer'));
     }
 
     /**
@@ -100,7 +104,22 @@ class CustomerController extends Controller
      */
     public function update(Request $request, Customer $customer)
     {
-        //
+        $user = $customer->user;
+        self::validation($user->id);
+        $user->update([
+            'name' => $request->name,
+            'mobile' => $request->mobile,
+        ]);
+
+        if ($request->male !== null) {
+
+            $data['male'] = $request->male;
+        }
+        $data['birthday'] = shamsi_to_miladi($request->birthday);
+
+        $customer->update($data);
+
+        return back()->withMessage("ثبت تفییرات مشتری با موفقیت انجام شد");
     }
 
     /**
@@ -112,5 +131,16 @@ class CustomerController extends Controller
     public function destroy(Customer $customer)
     {
         //
+    }
+
+    public static function validation($user_id=0)
+    {
+        // Form Information Validate
+        return request()->validate([
+            'name' => 'required|string|min:3|max:200',
+            'male' => 'nullable',
+            'birthday' => 'nullable',
+            'mobile' => 'required|string|digits:11|unique:users,mobile,'.$user_id,
+        ]);
     }
 }

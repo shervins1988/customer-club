@@ -55,6 +55,7 @@ class User extends Authenticatable
         $user = new self;
         $user->name = $name;
         $user->mobile = $mobile;
+        $user->mobile_verified_at = now();
         $user->password = bcrypt($password);
         $user->save();
         return $user;
