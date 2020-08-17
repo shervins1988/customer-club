@@ -130,7 +130,10 @@ class CustomerController extends Controller
      */
     public function destroy(Customer $customer)
     {
-        //
+        $user = $customer->user->id;
+        $user->delete();
+        $customer->delete();
+        return back()->withMessage("مشتری مورد نظر از سیستم حذف گردید");
     }
 
     public static function validation($user_id=0)

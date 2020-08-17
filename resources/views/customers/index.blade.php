@@ -104,10 +104,25 @@
                                     <i class="material-icons position">vpn_key</i>
                                     فعال
                                 </a>
-                                <a class="dropdown-item" href="#">
-                                    <i class="material-icons position">close</i>
-                                    حذف
-                                </a>
+
+                                <form  action="{{"customers/$customer->id"}}" method="post" id="delete-customer-{{$customer->id}}">
+                                    @csrf
+                                    @method("DELETE")
+                                    <button class="dropdown-item" type="button" data-toggle="popover" tabindex="0" data-trigger="focus" name="button" data-placement="top" data-html="true" data-content='
+
+                                    <div class="text-center p-3">
+                                        <button type="submit" form="delete-customer-{{$customer->id}}" class="btn btn-success mx-1">بلی</button>
+                                        <button type="button" class="btn btn-danger mx-1">خیر</button>
+                                    </div>
+
+                                    ' data-title=" آیا از حذف این آیتم مطمئن هستید؟ ">
+
+                                        <i class="material-icons position">close</i>
+                                        حذف
+                                    </button>
+
+                                </form>
+
                             </div>
                         </div>
                     </td>
