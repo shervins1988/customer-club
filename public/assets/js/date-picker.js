@@ -20,14 +20,15 @@ $(document).ready(function () {
         $('.final-gift').html(addCommas(giftAmount));
     });
 
-    function addCommas(nStr) {
-        nStr += '';
-        x = nStr.split('.');
-        x1 = x[0];
-        var rgx = /(\d+)(\d{3})/;
-        while (rgx.test(x1)) {
-            x1 = x1.replace(rgx,'$1' + ',' + '$2')
-        }
-        return x1;
-    }
 });
+
+function addCommas(nStr) {
+    nStr += '';
+    x = nStr.split('.');
+    x1 = x[0];
+    var rgx = /(\d+)(\d{3})/;
+    while (rgx.test(x1)) {
+        x1 = x1.replace(rgx,'$1' + ',' + '$2')
+    }
+    return x1;
+}
