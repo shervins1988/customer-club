@@ -28,14 +28,13 @@
                     <li><a href="ec-dashboard.html">گزارشگیری مشتری</a></li>
                 </ul>
             </li>
-            <li> <a href="javascript:void(0);" class="menu-toggle"><i class="zmdi zmdi-apps"></i><span>برنامه</span> </a>
+            <li> <a href="javascript:void(0);" class="menu-toggle"><i class="zmdi zmdi-apps"></i><span>سفارشات</span> </a>
                 <ul class="ml-menu">
-                    <li><a href="mail-inbox.html"> صندوق ورودی </a></li>
-                    <li><a href="chat.html">چت</a></li>
-                    <li><a href="events.html">تقویم</a></li>
-                    <li><a href="file-dashboard.html">مدیر فایل</a></li>
-                    <li><a href="contact.html">لیست مخاطبین</a></li>
-                    <li><a href="blog-dashboard.html">وبلاگ</a></li>
+                    <li><a href="{{url('transactions/create')}}">ثبت خرید جدید </a></li>
+                    <li><a href="chat.html">ثبت خرید با کارت</a></li>
+                    <li><a href="{{url('transactions')}}">لیست سفارشات</a></li>
+                    <li><a href="file-dashboard.html">کالا و خدمات</a></li>
+                    <li><a href="contact.html">گزارشگیری گالا و خدمات</a></li>
                 </ul>
             </li>
             <li> <a href="javascript:void(0);" class="menu-toggle"><i class="zmdi zmdi-swap-alt"></i><span>رابط کاربری (UI )</span> </a>

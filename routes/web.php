@@ -26,3 +26,4 @@ Route::post('/acc','UserController@update');
 
 //Resource Controller
 Route::resource('customers', 'CustomerController');
+Route::resource('transactions', 'TransactionController');

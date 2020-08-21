@@ -18,6 +18,15 @@ class Customer extends Model
         return $this->male ? "آقا" : "خانم";
     }
 
+    public function name()
+    {
+        return $this->user->name ?? '';
+    }
+
+    public function mobile()
+    {
+        return $this->user->mobile ?? '';
+    }
 
     public static function make($user_id,$birthday=null, $male=true)
     {
