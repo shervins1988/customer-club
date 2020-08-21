@@ -41,10 +41,10 @@
                                 </li>
                             </ul>
                         </div>
-                        <form class="row" action="{{"transactions"}}" method="post">
+                        <form class="row" action="{{"transactions"}}" method="post" data-gift-percent="10" data-discount-percent="5" id="new-transaction">
                             @csrf
 
-                            <div class="form-group col-md-4 mr-3">
+                            <div class="form-group col-md-3 mr-3">
                                 <label for="customer">انتخاب مشتری</label>
                                 <select class="form-control show-tick z-index" title="جستجوی مشتری" name="customers_id" id="customer" data-live-search="true">
                                     @foreach ($customers as $customer)
@@ -52,14 +52,32 @@
                                     @endforeach
                                 </select>
                             </div>
+                            <div class="form-group col-md-3 mr-3">
+                                <label for="amount">مبلغ خرید</label>
+                                    <input type="number" name="amount" value="{{old('amount')}}" id="amount" class="form-control first-amount">
+                            </div>
+
+
+                            <div class="col-md-3">
+                                <ul class="list-group p0">
+                                    <li class="list-group-item list-group-item-info">
+                                        تخفیف : <span class="final-discount">0</span> تومان
+                                    </li>
+                                    <li class="list-group-item list-group-item-info">
+                                        قابل پرداخت : <span class="final-payable">0</span> تومان
+                                    </li>
+                                    <li class="list-group-item list-group-item-info">
+                                        اعتبار هدیه : <span class="final-gift">0</span> تومان
+                                    </li>
+                                </ul>
+                            </div>
+
                             <div class="form-group col-md-4 mr-3">
                                 <label for="service">کالا و خدمات</label>
                                     <input type="text" name="service" value="{{old('service')}}" id="service" class="form-control">
                             </div>
-                            <div class="form-group col-md-4 mr-3">
-                                <label for="amount">مبلغ خرید</label>
-                                    <input type="number" name="amount" value="{{old('amount')}}" id="amount" class="form-control">
-                            </div>
+
+
                             <hr class="w-100 m-4 ">
                         <button type="submit" name="button" class="btn btn-raised btn-primary btn-round waves-effect mx-auto">ثبت</button>
                         </form>

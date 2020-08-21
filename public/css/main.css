@@ -24,3 +24,16 @@ body{
 position: relative;
 font-size: 19px !important;
 }
+
+.floatedNumber{
+    /* position: absolute; */
+    left: 0;
+    bottom: 43px;
+    background: rgba(139, 195, 74, 0.8);
+    display: none;
+    padding: 5px;
+    border-radius: 37px;
+    color: #fff;
+    z-index: 50;
+    text-align: center;
+}
