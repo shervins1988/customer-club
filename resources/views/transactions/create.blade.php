@@ -80,9 +80,15 @@
                                               <input type="number"  name="cash_discount" value="{{old('cash_discount') ?? 0}}" id="cash-discount" class="form-control cash-discount">
                                       </div>
 
-                                      <div class="form-group col-md-6">
+                                      <div class="form-group col-md-4">
                                           <label for="count">تعداد</label>
                                               <input type="number" name="count" value="{{old('count') ?? 1}}" id="count" class="form-control count">
+                                      </div>
+
+                                      <div class="form-group col-md-2 align-self-end">
+                                      <a href="javascript:void" class="delete-row hidden" title="حذف این ردیف" data-toggle="tooltip">
+                                        <i class="zmdi zmdi-close text-danger"></i>
+                                      </a>
                                       </div>
 
                                     </div>
@@ -111,7 +117,7 @@
                                         </li>
                                     </ul>
                                 </div>
-
+                                <hr class="w-100 m-4">
                               </div>
                             </div>
 
