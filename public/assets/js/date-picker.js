@@ -1,34 +1,48 @@
 $(document).ready(function () {
 
-    //inits
-    $('.pdp').persianDatepicker();
-    $('[data-toggle=popover]').popover();
+  //inits
+  $('.pdp').persianDatepicker();
+  $('[data-toggle=popover]').popover();
 
 
-    //transaction
-    $('.first-amount').keyup(function () {
-        var firstAmount = $(this).val();
-        var discountPercent = $('#new-transaction').attr('data-discount-percent');
-        var giftPercent = $('#new-transaction').attr('data-gift-percent');
+  //clone Transaction rows
 
-        var discountAmount = (firstAmount*discountPercent) / 100;
-        var payableAmount = firstAmount - discountAmount ;
-        var giftAmount = (payableAmount*giftPercent) / 100;
-
-        $('.final-discount').html(addCommas(discountAmount));
-        $('.final-payable').html(addCommas(payableAmount));
-        $('.final-gift').html(addCommas(giftAmount));
-    });
+  $('#add-row').click(function () {
+    $('.transaction-row').clone().appendTo('#transaction-rows');
+  })
+  //transaction
+  $('.first-amount,.cash-discount,.count').keyup(function () {
+    updateRow();
+  });
 
 });
 
+function updateRow() {
+  var discountPercent = $('#new-transaction').attr('data-discount-percent');
+  var giftPercent = $('#new-transaction').attr('data-gift-percent');
+
+  var firstAmount = $('.first-amount').val();
+  var count = $('.count').val() ? $('.count').val() : 0;
+  var cashDiscountAmount = $('.cash-discount').val() ? $('.cash-discount').val() : 0;
+
+  var clubDiscountAmount = (firstAmount * discountPercent) / 100;
+  var payableAmount = firstAmount - clubDiscountAmount - cashDiscountAmount;
+  var giftAmount = (payableAmount*giftPercent) / 100;
+
+  $('.final-club-discount').html(addCommas(count * clubDiscountAmount));
+  $('.final-cash-discount').html(addCommas(count * cashDiscountAmount));
+  $('.final-count').html(addCommas(count));
+  $('.final-payable').html(addCommas(count * payableAmount));
+  $('.final-gift').html(addCommas(count * giftAmount));
+}
+
 function addCommas(nStr) {
-    nStr += '';
-    x = nStr.split('.');
-    x1 = x[0];
-    var rgx = /(\d+)(\d{3})/;
-    while (rgx.test(x1)) {
-        x1 = x1.replace(rgx,'$1' + ',' + '$2')
-    }
-    return x1;
+  nStr += '';
+  x = nStr.split('.');
+  x1 = x[0];
+  var rgx = /(\d+)(\d{3})/;
+  while (rgx.test(x1)) {
+    x1 = x1.replace(rgx,'$1' + ',' + '$2')
+  }
+  return x1;
 }
